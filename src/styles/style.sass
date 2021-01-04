@@ -8,3 +8,186 @@
 
 html
     scroll-behavior: smooth
+
+body
+    background-color: $main-bg
+    color: $light-text-color
+    font-family: 'Poppins', sans-serif
+    font-size: 18px
+    line-height: 27px
+
+h1, h2, h3
+    color: $main-text-color
+    font-family: 'Playfair Display', serif
+    font-weight: $bold-text
+
+h1
+    font-size: 48px
+
+h2
+    font-size: 28px
+
+h3
+    font-size: 22px
+
+.btn
+    padding: 6px 24px
+    color: $white-text-color
+    background-color: $accent
+    border-radius: 8px
+
+    &:hover
+        color: $white-text-color
+        background-color: lighten($accent, 5%)
+
+.section
+    position: relative
+    padding: 100px 0
+
+    &--alternate
+        background-color: $alternate-bg
+
+    &--dark
+        background-color: $dark-bg
+
+    &--dashed
+        &::after
+            content: ''
+            position: absolute
+            background-color: $accent
+            width: 108px
+            height: 3px
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%) perspective(1px) rotateX(1deg)
+
+.about-us
+
+    & img
+        margin: 0 0 32px
+
+        +screen-up(md)
+            margin: 0
+
+    & .header
+        color: $main-text-color
+        margin: 0 0 40px
+
+        & > span
+            color: $accent
+
+.feature
+    max-width: 516px
+    margin: 0 0 45px
+    width: 100%
+    text-align: center
+
+    +screen-up(lg)
+        margin: 0
+        max-width: 316px
+
+    &__header
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        margin: 0 0 35px
+
+        & img
+            width: 60px
+            height: auto
+            margin: 0 24px 0 0
+
+.quotes-card
+    display: flex
+    flex-direction: column
+    height: 100%
+    padding: 39px 31px 25px
+    border-radius: 2px
+    box-shadow: 7px 10px 30px 0 rgba(0,0,0,0.1)
+
+    +screen-up(lg)
+        margin: 0
+
+    & h3
+        position: relative
+        text-align: center
+        margin: 0 0 24px
+
+        &::before, &::after
+            content: ''
+            position: absolute
+            background-color: $accent
+            border-radius: 2px
+            width: 20%
+            height: 3px
+
+            +screen-up(lg)
+                width: 20%
+                height: 3px
+
+        &::before
+            top: 50%
+            left: 10%
+
+        &::after
+            top: 50%
+            right: 10%
+
+    & p
+        margin: 0 0 32px
+
+    & a
+        margin-top: auto
+        display: block
+        text-align: center
+
+.testimonials
+
+    & h2
+        margin: 0 0 60px
+
+.testimonial
+    max-width: 310px
+    width: 100%
+    border-top: 2px solid $accent
+    padding: 12px 0 0
+    margin: 0 auto
+
+    & p
+        margin: 0 0 27px
+
+.swiper-wrapper
+    height: auto
+    margin: 0 0 60px
+
+.swiper-pagination
+    position: relative
+
+    &-bullet
+        opacity: 1
+        width: 15px
+        height: 15px
+        background-color: #E0E0E0
+
+        &:not(:last-child)
+            margin: 0 23px 0 0
+
+        &-active
+            background-color: $accent
+
+.slider-navigation
+    position: relative
+    display: flex
+    justify-content: center
+
+.navigation-button
+
+    &-prev, &-next
+        color: $accent
+        font-size: 30px
+        cursor: pointer
+        margin: 0 10px
+
+    &-disabled
+        cursor: default
+        color: #E0E0E0
