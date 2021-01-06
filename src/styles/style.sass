@@ -40,15 +40,27 @@ h3
         color: $white-text-color
         background-color: lighten($accent, 5%)
 
+    &--ghost
+        background-color: transparent
+        border: 1px solid $accent
+        border-radius: 2px
+
 .section
     position: relative
     padding: 100px 0
+
+    & h2
+        margin: 0 auto 60px
+        line-height: 37.32px
+        max-width: 400px
+        text-transform: capitalize
 
     &--alternate
         background-color: $alternate-bg
 
     &--dark
         background-color: $dark-bg
+        color: $white-text-color
 
     &--dashed
         &::after
@@ -141,11 +153,6 @@ h3
         display: block
         text-align: center
 
-.testimonials
-
-    & h2
-        margin: 0 0 60px
-
 .testimonial
     max-width: 310px
     width: 100%
@@ -191,3 +198,52 @@ h3
     &-disabled
         cursor: default
         color: #E0E0E0
+
+.statistic-card
+    border-top: solid 2px $accent
+    padding: 28px 0 0
+    color: $main-text-color
+    max-width: 252px
+    width: 100%
+    margin: 0 auto 30px
+
+    +screen-up(lg)
+        margin: 0 auto 50px
+
+    & span
+        font-size: 48px
+        font-family: 'Playfair Display', serif
+
+footer
+
+    & h3
+        color: $accent
+        font-family: 'Poppins', sans-serif
+        margin: 0 0 24px
+        text-align: center
+
+        +screen-up(lg)
+            text-align: left
+
+    & p
+        font-size: 14px
+        margin: 0 0 16px
+
+.social-media
+
+    & img:not(:last-child)
+        width: 25px
+        height: 25px
+        margin: 0 10px 0 0
+
+.copyright
+    font-size: 14px
+    background-color: #333333
+    color: $white-text-color
+
+    & span
+        margin: 0 10px
+        display: none
+
+        +screen-up(lg)
+            display: block
