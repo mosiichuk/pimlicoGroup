@@ -37,6 +37,7 @@ header
     top: 0
     left: 0
     width: 100%
+    z-index: 1
 
     & .btn
         min-width: 135px
@@ -224,8 +225,6 @@ header
 
 .swiper-pagination
     position: relative
-    display: flex
-    align-items: center
 
     &-bullet
         opacity: 1
@@ -243,6 +242,7 @@ header
     position: relative
     display: flex
     justify-content: center
+    align-items: center
 
 .navigation-button
 
@@ -251,6 +251,7 @@ header
         font-size: 30px
         cursor: pointer
         margin: 0 10px
+        line-height: 30px
 
     &-disabled
         cursor: default
@@ -301,6 +302,7 @@ footer
     & span
         margin: 0 10px
         display: none
+        line-height: 27px
 
         +screen-up(lg)
             display: block
