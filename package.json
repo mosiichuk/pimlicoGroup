@@ -53,8 +53,8 @@
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
         "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
-        "start:dist": "http-server dist --port 8000",
-        "preview": "npm run build && npm run start:dist",
+        "start:build": "http-server build --port 8000",
+        "preview": "npm run build && npm run start:build",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
